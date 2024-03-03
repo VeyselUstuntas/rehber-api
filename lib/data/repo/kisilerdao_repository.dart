@@ -44,9 +44,6 @@ class KisilerDaoRepository{
     var map = {"kisi_ad":aramaKelimesi};
     var response = await Dio().post(url,data: FormData.fromMap(map));
     return parseKisiler(response.data as String);
-
-
-
   }
 
   Future<String> kisiSil(String kisi_id) async{
